@@ -148,10 +148,10 @@ export default class Home extends Component {
                                                     className='numberOfLikes'>&nbsp;{image.likes.count + 1} likes</span>
                                             </p>
                                     }
-                                    <FormControl className='commentForm' fullWidth={true} margin='normal'>
+                                    <FormControl  fullWidth={true} className='commentForm' margin='normal'>
                                         <InputLabel htmlFor='comment'>Add a comment</InputLabel>
                                         <Input className='inputComment'/>
-                                        <Button variant='contained' color='primary'>ADD</Button>
+                                        <Button variant='contained' color='primary' className="login-btn m1">ADD</Button>
                                     </FormControl>
                                 </div>
                             </CardContent>

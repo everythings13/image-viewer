@@ -21,11 +21,11 @@
     cursor: pointer;
 }
 
-.commentForm .cardContent {
+.cardContent .commentForm  {
     display: inline-block;
 }
 
-.inputComment .cardContent .commentForm {
+.cardContent .commentForm .inputComment {
     margin-right: 1.1rem;
     width: 84%;
 }
