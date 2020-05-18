@@ -79,7 +79,7 @@ export default class Login extends Component {
                         {isEmptyPassword ? <span className='violation'>required</span> : null}
                         {isValidated ? null : <span className='violation'>Incorrect username and/or password</span>}
                     </FormControl>
-                    <Button className="login-btn m1" color='primary' variant='contained'
+                    <Button color='primary' variant='contained'
                             onClick={this.handleLogin}>LOGIN</Button>
                 </Card>
             </div>
