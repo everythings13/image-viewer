@@ -11,19 +11,35 @@ class Header extends Component {
         };
     }
 
+    /**
+     * @memberof Home and profile pages
+     * @description action to occur when search button is clicked
+     */
     onSearch(expression) {
         this.props.onFilter(expression.target.value);
     }
 
+    /**
+     * @memberof Home and profile pages
+     * @description redirect to profile page from home page
+     */
     goToProfilePage = () => {
         window.location = '/profile';
     };
 
+    /**
+     * @memberof  Home and profile pages
+     * @description logs the user out
+     */
     logout = () => {
         sessionStorage.removeItem('accessToken');
         window.location = '/';
     };
 
+    /**
+     * @memberof  Home and profile pages
+     * @description to toggle the dropdown
+     */
     toggleDropdown = () => {
         if (this.state.isDropdownEnabled) {
             this.setState({isDropdownEnabled: false});
