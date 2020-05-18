@@ -21,12 +21,20 @@ export default class Login extends Component {
         };
     }
 
+    /**
+     * @memberof Login
+     * @description setting new state of the object
+     */
     setNewState(variable, username) {
         const updatedState = {};
         updatedState[username] = variable.target.value;
         this.setState(updatedState);
     }
 
+    /**
+     * @memberof Login
+     * @description action to occur when login button is clicked
+     */
     handleLogin = () => {
         const {username, password} = this.state;
         const pwd = 'password';

@@ -25,6 +25,10 @@ export default class Home extends Component {
         };
     }
 
+    /**
+     * @memberof Home
+     * @description filters posts
+     */
     filteredData = expression => {
         const {images} = this.state;
         if (images) {
@@ -35,6 +39,10 @@ export default class Home extends Component {
         }
     };
 
+    /**
+     * @memberof Home
+     * @description action to occur when like is clicked
+     */
     onLike = id => {
         const {filteredImages} = this.state;
         const likedImage = filteredImages.filter(image => image.id === id);
@@ -47,6 +55,10 @@ export default class Home extends Component {
         });
     };
 
+    /**
+     * @memberof Home
+     * @description adds date to each post
+     */
     getDateFromDateConverter = timeStamp => {
         let newDate = new Date(timeStamp);
         let seconds = newDate.getSeconds();
@@ -68,6 +80,10 @@ export default class Home extends Component {
         return timeAndDate.slashSeparatedDate + " " + timeAndDate.time;
     };
 
+    /**
+     * @memberof Home
+     * @description sets object state on the basis of data sent by API
+     */
     componentDidMount() {
         const accessToken = sessionStorage.getItem('accessToken');
         if (accessToken) {

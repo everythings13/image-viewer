@@ -29,21 +29,36 @@ export default class Profile extends React.Component {
         };
     }
 
-
+    /**
+     * @memberof Profile
+     * @description closes update name pop up
+     */
     closePopUp = () => {
         this.setState({openModal: false});
     }
 
+    /**
+     * @memberof Profile
+     * @description sets updated name state
+     */
     updateName = (expression, updatedFullName) => {
         const nextState = {};
         nextState[updatedFullName] = expression.target.value;
         this.setState(nextState);
     }
 
+    /**
+     * @memberof Profile
+     * @description opens update name pop up
+     */
     openPopUp = () => {
         this.setState({openModal: true});
     };
 
+    /**
+     * @memberof Profile
+     * @description updates full name to a new name
+     */
     modifyFullName = () => {
         const {updatedFullName} = this.state;
         if (updatedFullName.trim() === "") {
@@ -58,6 +73,10 @@ export default class Profile extends React.Component {
         }
     };
 
+    /**
+     * @memberof Profile
+     * @description sets object state on the basis of data sent by API
+     */
     componentDidMount() {
         const accessToken = sessionStorage.getItem('accessToken');
         if (accessToken) {
